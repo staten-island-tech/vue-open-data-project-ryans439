@@ -1,6 +1,23 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, watch } from 'vue'
+import { getPost } from './api.js'
+
+
+watch(() => route.params.id, fetchData, { immediate: true })
+
+async function fetchData(id) {
+  error.value = post.value = null
+  loading.value = true
+  
+  try {
+    post.value = await getPost(id)  
+  } catch (err) {
+    error.value = err.toString()
+  } finally {
+    loading.value = false
+  }
+}
 </script>
 
 <template>
