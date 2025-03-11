@@ -1,19 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref, watch } from 'vue'
-import { getPost } from './api.js'
 
+const data = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json";
 
-watch(() => route.params.id, fetchData, { immediate: true })
-
-async function fetchData(id) {
+async function fetchData(data) {
   error.value = post.value = null
   loading.value = true
   
   try {
-    post.value = await getPost(id)  
+    post.value = await getPost(data)
   } catch (err) {
-    error.value = err.toString()
+    error.value = err
   } finally {
     loading.value = false
   }

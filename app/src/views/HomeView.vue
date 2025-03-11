@@ -1,5 +1,5 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import AverageScore from '@/components/AverageScore.vue';
 </script>
 
 <template>
