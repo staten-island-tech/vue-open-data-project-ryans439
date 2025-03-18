@@ -1,32 +1,26 @@
 <template>
   <div>
-    <Bar :data="chartData" :options="chartOptions" /> 
-  </div>
+    <label for="schools">Select A School</label>
+    <select id="schools" v-model=selectedSchool>
+      <option value = "school1">Text</option>
+      <option value = "school2">Text</option>
+      <option value = "school3">Text</option>
+    </select>
+    <p>{{ selectedSchool }}</p>
+  </div> 
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { defineProps } from 'vue';
-import { Bar } from 'vue-chartjs';
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-} from "chart.js";
+import { ref } from 'vue';
+export default {
+  setup() {
+    const selectedSchool = ref('school1');
+    return selectedSchool;
+}
+}
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
-
-const props = defineProps({
-  data: {
-    type: Object,
-    required: true,
-  },
-});
 </script>
+
 
 <style lang="scss" scoped>
 

@@ -1,5 +1,5 @@
 <script setup>
-import AverageScore from '@/components/AverageScore.vue';
+import '@/components/AverageScore.vue';
 </script>
 
 <template>
