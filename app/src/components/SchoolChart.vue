@@ -2,6 +2,7 @@
     <div>
       <h2>Schools vs. SAT Scores</h2>
       <canvas ref="chartCanvas"></canvas>
+      
     </div>
   </template>
   
@@ -32,3 +33,5 @@
   });
   </script>
   
+<style scoped>
+</style>
