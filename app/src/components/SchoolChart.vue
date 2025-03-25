@@ -16,17 +16,15 @@
     const response = await fetch("https://data.cityofnewyork.us/resource/f9bf-2cp4.json");
     const data = await response.json();
     const labels = data.map(school => school.school_name);
-    const scores = data.map(school => Number(school.sat_math_avg_score));
-    const english = data.map(school => Number(school.sat_critical_reading_avg_score));
-    const writing = data.map(school => Number(school.sat_writing_avg_score));
+    const testTakers = data.map(school => Number(school.num_of_sat_test_takers));
+
     new Chart(chartCanvas.value, {
       type: 'bar',
       data: {
         labels,
         datasets: [
-          { label: 'SAT Math Scores', data: scores, backgroundColor: 'blue' },
-          { label: 'SAT English Scores', data: english, backgroundColor: 'green' },
-          { label: 'SAT Writing Scores', data: writing, backgroundColor: 'red' }
+          { label: 'Test Taker Count', data: testTakers, backgroundColor: 'blue' },
+
         ]
       }
     });
