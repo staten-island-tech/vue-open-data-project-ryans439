@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2>SAT Subject Scores</h2>
+      <h2>Average SAT Scores</h2>
       <canvas ref="subjectCanvas"></canvas>
     </div>
   </template>

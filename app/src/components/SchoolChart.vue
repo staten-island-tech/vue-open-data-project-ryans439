@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2>Schools vs. SAT Scores</h2>
+      <h2>Average Test Taker Count</h2>
       <canvas ref="chartCanvas"></canvas>
       
     </div>
