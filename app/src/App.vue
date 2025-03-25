@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Schools vs. SAT Scores</router-link>
+      <router-link to="/about">Schools vs. Subjects On SAT Exam</router-link>
     </nav>
     <router-view></router-view>
   </div>
