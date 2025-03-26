@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/Home">Amount of Test Takers Per School</router-link>
+      <router-link to="/">Amount of Test Takers Per School</router-link>
       <router-link to="/about">Schools and Avg SAT Scores</router-link>
-      <router-link to="/cards">Cards View</router-link>
-      
     </nav>
     <h1>NYC School SAT Performance</h1>
 
