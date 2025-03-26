@@ -1,16 +1,43 @@
 <template>
-  <CardComp v-for="school in data" :key="school.school_name" :school="school"/>>
+  <div class="cards-view">
+    <h1 class="title">Schools Data</h1>
+    <div class="card-container">
+      <div v-for="school in data" :key="school.school_name" class="card">
+        <h2 class="school-name">{{ school.school_name }}</h2>
+        <div class="stats">
+          <p class="stat">Test Takers: {{ school.num_of_sat_test_takers }}</p>
+          <p class="stat">SAT Math Avg Score: {{ school.sat_math_avg_score }}</p>
+          <p class="stat">SAT Critical Reading Avg Score: {{ school.sat_critical_reading_avg_score }}</p>
+          <p class="stat">SAT Writing Avg Score: {{ school.sat_writing_avg_score }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import CardComp from '../components/CardComp.vue';
+
 const data = ref([]);
 
 onMounted(async () => {
-  const response = await fetch("https://data.cityofnewyork.us/resource/f9bf-2cp4.json");
-  data.value = await response.json();
+  console.log('Fetching data...');
+  try {
+    const response = await fetch("https://data.cityofnewyork.us/resource/f9bf-2cp4.json");
+    console.log('Data fetched:', response);
+    if (!response.ok) {
+      console.error('Error fetching data:', response.status);
+      return;
+    }
+    const jsonData = await response.json();
+    console.log('Data parsed:', jsonData);
+    data.value = jsonData;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 });
+
+console.log('Data:', data);
 </script>
 
 <style scoped>
