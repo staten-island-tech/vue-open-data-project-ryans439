@@ -1,37 +1,9 @@
-<template>
-  <div>
-    <label for="schools">Select A School</label>
-    <select id="schools" v-model=selectedSchool>
-      <option value = "school1">Text</option>
-      <option value = "school2">Text</option>
-      <option value = "school3">Text</option>
-    </select>
-    <p>{{ selectedSchool }}</p>
-  </div> 
-</template>
-
-<script setup>
-import { ref } from 'vue';
-export default {
-  setup() {
-    const selectedSchool = ref('school1');
-    return selectedSchool;
-}
-}
-
-</script>
-
-
-<style lang="scss" scoped>
-
-</style>
-
 
 https://data.cityofnewyork.us/resource/f9bf-2cp4.json
 
 scaffolding:
 homeview: (subject three bars)
- - title bar component
+ - title bar componentd 
  - dropdown menu component (schools)
  - chart component
  - hover aspect to see exactly how much
