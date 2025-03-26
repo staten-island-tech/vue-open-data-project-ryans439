@@ -8,3 +8,4 @@
 <script setup>
 import SchoolChart from '@/components/SchoolChart.vue';
 </script>
+
