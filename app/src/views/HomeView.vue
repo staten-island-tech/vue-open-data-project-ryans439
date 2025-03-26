@@ -8,8 +8,12 @@
 <script setup>
 import SchoolChart from '@/components/SchoolChart.vue';
 <<<<<<< HEAD
+<<<<<<< HEAD
 </script>
 
+=======
+</script>
+>>>>>>> parent of 2a91728 (hrtehj65j56j)
 =======
 </script>
 >>>>>>> parent of 2a91728 (hrtehj65j56j)
