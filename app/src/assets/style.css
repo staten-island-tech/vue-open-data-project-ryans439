@@ -1,64 +1,63 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #28a745;
-    --text-color: #ffffff;
-    --background-color: #121212;
-    --border-radius: 8px;
-    --padding: 16px;
-    --font-family: 'Poppins', sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --text-color: #ffffff;
+  --background-color: #121212;
+  --border-radius: 8px;
+  --padding: 16px;
+  --font-family: 'Poppins', sans-serif;
 }
-  
+
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 nav {
-    background-color: var(--primary-color);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    margin-top: 20px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    padding: 12px 20px;
-    border-radius: var(--border-radius);
-    background: #333;
-    border: 2px solid var(--primary-color);
-    display: inline-block;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    color: black;
-    background: #444;
-  }
+  background-color: var(--primary-color);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: 20px;
+}
 
-  .chart-container {
-    padding: var(--padding);
-    background: #1e1e1e;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    display: flex;
-    justify-content: flex-start;
-    width: 90%; 
-    margin-left: auto; 
-    margin-right: 0; 
-    overflow-x: auto;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  background: #333;
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  text-align: center;
+}
+
+nav a:hover {
+  color: black;
+  background: #444;
+}
+
+.chart-container {
+  padding: var(--padding);
+  background: #1e1e1e;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  width: 90%; 
+  margin-left: auto; 
+  margin-right: auto; /* Center the container */
+  overflow-x: auto;
 }
 
 .chart-container canvas {
-    width: 100% !important;
-    height: 300px !important; 
-    max-width: 1200px; 
+  width: 100% !important;
+  height: 500px !important; /* Increase height */
+  max-width: 1200px;
 }
-  
